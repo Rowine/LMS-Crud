@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Create a Leave</h1>  
+<form action="SCreateLeave" method="post">  
+<table>  
+<tr><td>Reason:</td><td>
+	<select name="reason" style="width:150px">  
+<option>Sick leave</option>  
+<option>Casual leave</option>  
+<option>Public holiday</option>  
+<option>Religious holidays</option> 
+<option>Maternity leave</option>
+<option>Paternity leave</option>
+<option>Bereavement leave</option>
+<option>Compensatory leave</option>
+<option>Sabbatical leave</option>
+<option>Unpaid leave</option>
+</select>  
+</td></tr>   
+<tr><td>Leave Start:</td><td><input type="date" name="leaveStart"/></td></tr> 
+<tr><td>Leave End:</td><td><input type="date" name="leaveEnd"/></td></tr>  
+<tr><td colspan="2"><input type="submit" value="Submit"/></td></tr>  
+</table>  
+</form> 
+</body>
+</html>
