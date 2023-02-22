@@ -1,0 +1,19 @@
+CREATE TABLE application (
+	application_id int GENERATED ALWAYS AS IDENTITY(Start with 1, Increment by 1) PRIMARY KEY,
+	user_id int NOT NULL REFERENCES users,
+	reason varchar(255) NOT NULL,
+	status varchar(255) DEFAULT 'Pending',
+	leave_start date NOT NULL,
+	leave_end date NOT NULL,
+	created_date DATE DEFAULT CURRENT_DATE
+)
+
+
+CREATE TABLE users (
+	user_id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY(Start with 1, Increment by 1) PRIMARY KEY,
+	name varchar(255) NOT NULL,
+	email varchar(255) NOT NULL,
+	is_admin varchar(255) DEFAULT 'False',
+	password varchar(255) NOT NULL,
+	created_date DATE DEFAULT CURRENT_DATE
+);
